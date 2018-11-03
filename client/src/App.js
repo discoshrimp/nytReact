@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
 import API from "./utils/API";
 import Saved from "./components/Saved";
 import Article from "./components/Article";
 import Results from "./components/Results";
-import Articles from './pages/Articles'
 
 class App extends Component {
   state = {
