@@ -1,8 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
-const cheerio = require('cheerio')
-const axios = require('axios')
 const mongoose = require('mongoose')
 const app = express()
 const PORT = process.env.PORT || 3001
@@ -20,7 +18,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use(routes)
 
 //connect to Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/nytReact", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI)
 
 //Start API Server
 app.listen(PORT, function () {
